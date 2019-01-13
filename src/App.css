@@ -1,0 +1,59 @@
+html, body, * {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+header {
+    background: #efefef;
+    padding-bottom: 20px;
+}
+
+header>nav {
+    text-align: center;
+}
+
+header>nav>ul {
+    overflow: auto;
+    padding: 0;
+    display: inline-block;
+}
+
+header>nav>ul>li {
+    float: left;
+    margin-right: 20px;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header>nav>ul>li.active {
+    text-decoration: underline;
+}
+
+nav {
+    overflow: auto;
+}
+
+main {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+}
