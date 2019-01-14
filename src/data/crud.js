@@ -1,5 +1,5 @@
 function post(url, entity) {
-    let status = -1;
+    let result = undefined;
     return fetch(url, {
         method: "POST",
         headers: {
@@ -8,32 +8,32 @@ function post(url, entity) {
         },
         body: JSON.stringify(entity)
     }).then((response, error) => {
-        status = response.status;
+        result = response;
         return response.json();
     }).then(body => {
-        response.data = body;
-        return response;
+        result.data = body;
+        return result;
     })
 }
 
 function get(url) {
-    let status = -1;
+    let result = undefined;
     return fetch(url, {
         method: "GET",
         headers: {
             "Accept": "application/json"
         }
     }).then(response => {
-        status = response.status;
+        result = response;
         return response.json();
     }).then(body => {
-        response.data = body;
-        return response;
+        result.data = body;
+        return result;
     })
 }
 
 function put(url, entity) {
-    let status = -1;
+    let result = undefined;
     return fetch(url, {
         method: "PUT",
         headers: {
@@ -42,29 +42,28 @@ function put(url, entity) {
         },
         body: JSON.stringify(entity)
     }).then((response, error) => {
-        status = response.status;
+        result = response;
         return response.json();
     }).then(body => {
-        response.data = body;
-        return response;
+        result.data = body;
+        return result;
     });
 }
 
 function del(url) {
-    let status = -1;
+    let result = undefined;
     return fetch(url, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",
             "Accept": "application/json"
-        },
-        body: JSON.stringify(entity)
+        }
     }).then((response, error) => {
-        status = response.status;
+        result = response;
         return response.json();
     }).then(body => {
-        response.data = body;
-        return response;
+        result.data = body;
+        return result;
     });
 }
 
