@@ -69,3 +69,36 @@ table {
 .toast-top-right {
     top: 92px;
 }
+
+div.form-field {
+    margin-bottom: 20px;
+}
+
+div.form-field label {
+    font-weight: bold;
+    display:block;
+    margin-bottom: 10px;
+}
+
+div.form-field input, div.form-field select {
+    width: 100%;
+    padding: 10px;
+}
+
+div.form-field button {
+    padding: 20px;
+    background: #eee;
+    border: 1px solid #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+.form-errors div {
+    background: #FFC6C6;
+    padding: 15px;
+}
+
+.form-errors div p {
+    color: red;
+    margin: 0;
+} 
